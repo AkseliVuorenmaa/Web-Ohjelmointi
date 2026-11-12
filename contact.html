@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Huoltopyyntö - Autokorjaamo Hakola</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Autokorjaamo Hakola</h1>
+        <p>Autokorjaamo Kauhavalla</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Etusivu</a>
+        <a href="about.html">Meistä</a>
+        <a href="listing.html">Palvelut</a>
+        <a href="contact.html">Huoltopyyntö</a>
+    </nav>
+
+    <main>
+
+        <h2>Huoltopyyntö</h2>
+
+        <p>
+            Voit lähettää meille huoltopyynnön täyttämällä
+            alla olevan lomakkeen.
+            Otamme sinuun yhteyttä ja vahvistamme huoltoajan.
+        </p>
+
+        <form>
+
+            <p>
+                <label for="name">Nimi:</label><br>
+                <input type="text" id="name" name="name"
+                pattern="[A-Za-zÅÄÖåäö ]+"
+                title="Nimi saa sisältää vain kirjaimia ja välilyöntejä"
+                required>
+            </p>
+
+            <p>
+                <label for="registration">Auton rekisterinumero:</label><br>
+                <input type="text" id="registration" name="registration"
+                placeholder="ABC-123"
+                pattern="[A-Za-z]{3}-[0-9]{3}"
+                title="Anna rekisterinumero muodossa ABC-123"
+                required>
+            </p>
+
+            <p>
+                <label for="phone">Puhelinnumero:</label><br>
+                <input type="tel" id="phone" name="phone"
+                placeholder="0401234567" required>
+            </p>
+
+
+            <p>
+                <label for="email">Sähköposti:</label><br>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    title="Anna sähköpostiosoite muodossa nimi@posti.com"
+                    required>
+            </p>
+
+            <p>
+                <label for="problem">Vian kuvaus:</label><br>
+                <textarea id="problem" name="problem"
+                rows="5" cols="40" required></textarea>
+            </p>
+
+            <p>
+                <label for="date">Toivottu huoltopäivä:</label><br>
+                <input type="date" id="date" name="date"
+                min="2026-11-12" required>
+            </p>
+
+            <p>
+                <input type="submit" value="Lähetä huoltopyyntö">
+            </p>
+
+        </form>
+
+        <p>
+            Huom! Vastaanotamme huoltopyyntösi, vaikka syöttämäsi tiedot katoavat lähettämisen jälkeen.
+            Otamme sinuun yhteyttä puhelimitse ja vahvistamme huoltoajan erikseen.
+        </p>
+
+    </main>
+
+    <footer>
+        <p>Autokorjaamo Hakola, Kauhava</p>
+        <p>Avoinna arkisin. Lauantaisin sopimuksen mukaan.</p>
+    </footer>
+
+</body>
+</html>

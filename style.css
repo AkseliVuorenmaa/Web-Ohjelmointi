@@ -1,0 +1,308 @@
+:root {
+    --primary-color: #234e70;
+    --primary-hover: #16364e;
+    --light-color: #f5f7fa;
+    --text-color: #333333;
+    --border-radius: 12px;
+    --spacing: 1rem;
+}
+
+/* Yleiset asetukset */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: var(--text-color);
+    line-height: 1.6;
+
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Otsikko */
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+
+    text-align: center;
+
+    padding: 2rem;
+    border-radius: var(--border-radius);
+
+    margin-bottom: 1.5rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Navigaatio */
+
+nav {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+
+    margin-bottom: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: white;
+    background-color: var(--primary-color);
+
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Sisältö */
+
+main {
+    background-color: white;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    background-color: var(--light-color);
+
+    padding: 1.5rem 2rem;
+
+    border-radius: var(--border-radius);
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Painike */
+
+.button {
+    display: inline-block;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    text-decoration: none;
+
+    padding: 0.9rem 1.5rem;
+
+    border-radius: 999px;
+
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Footer */
+
+footer {
+    margin-top: 3rem;
+
+    background-color: var(--light-color);
+
+    text-align: center;
+
+    padding: 1.5rem;
+
+    border-radius: var(--border-radius);
+}
+
+/* Lomakkeita varten (contact.html) */
+
+form {
+    background-color: var(--light-color);
+
+    padding: 1.5rem;
+
+    border-radius: var(--border-radius);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 0.75rem;
+
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+
+    border: none;
+
+    padding: 0.9rem 1.5rem;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Näppäimistöfokus */
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid orange;
+    outline-offset: 2px;
+}
+
+/* Mobiili */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 0.75rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+}
+
+/* Palvelukortit */
+
+.service-card {
+    background-color: var(--light-color);
+
+    padding: 1.5rem;
+
+    margin-bottom: 1rem;
+
+    border-radius: var(--border-radius);
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.service-card p {
+    margin-bottom: 0;
+}
+
+/* Tumma tila */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background-color: #3a3a3a;
+        color: #ffffff;
+    }
+
+    main {
+        background-color: #3a3a3a;
+    }
+
+    p,
+    li {
+        color: #ffffff;
+    }
+
+    header {
+        background-color: #0f2d47;
+    }
+
+    nav a {
+        background-color: #34658f;
+    }
+
+    nav a:hover {
+        background-color: #4a7da8;
+    }
+
+    footer,
+    ul,
+    form,
+    .service-card {
+        background-color: #4a4a4a;
+    }
+
+    h2,
+    h3 {
+        color: #9dd3f7;
+    }
+
+    input,
+    textarea,
+    select {
+        background-color: #4a4a4a;
+        color: white;
+        border: 1px solid #666666;
+    }
+
+    button,
+    .button {
+        background-color: #34658f;
+    }
+
+    button:hover,
+    .button:hover {
+        background-color: #4a7da8;
+    }
+}

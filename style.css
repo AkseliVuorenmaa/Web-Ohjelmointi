@@ -73,6 +73,8 @@ nav a:hover {
 
 main {
     background-color: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
 }
 
 h2 {
@@ -141,10 +143,11 @@ footer {
 
 form {
     background-color: var(--light-color);
-
     padding: 1.5rem;
-
     border-radius: var(--border-radius);
+
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 input,
@@ -306,4 +309,32 @@ select:focus {
     .button:hover {
         background-color: #4a7da8;
     }
+
+    [popover] {
+        background-color: #4a4a4a;
+        color: white;
+    }
+
+}
+
+.info-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+[popover] {
+    position: absolute;
+    top: 60px;
+    left: 0;
+
+    max-width: 350px;
+    padding: 1rem;
+
+    border: none;
+    border-radius: var(--border-radius);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+    background-color: white;
+    color: black;
 }

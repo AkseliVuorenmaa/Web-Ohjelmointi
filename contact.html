@@ -33,23 +33,50 @@
             Otamme sinuun yhteyttä ja vahvistamme huoltoajan.
         </p>
 
+        <div class="info-wrapper">
+
+            <button popovertarget="info">
+                Lisätietoa huoltopyynnöstä
+            </button>
+
+            <div id="info" popover="auto">
+                Huoltopyynnön lähettäminen ei varaa aikaa automaattisesti.
+                Otamme yhteyttä ja vahvistamme ajan erikseen.
+            </div>
+
+        </div>
+
+
         <form>
 
-            <p>
-                <label for="name">Nimi:</label><br>
-                <input type="text" id="name" name="name"
+            <label for="name">Nimi:</label><br>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                aria-describedby="nameHelp"
                 pattern="[A-Za-zÅÄÖåäö ]+"
                 title="Nimi saa sisältää vain kirjaimia ja välilyöntejä"
                 required>
+
+            <p id="nameHelp">
+                Nimi saa sisältää vain kirjaimia ja välilyöntejä.
             </p>
 
-            <p>
-                <label for="registration">Auton rekisterinumero:</label><br>
-                <input type="text" id="registration" name="registration"
+            <label for="registration">Auton rekisterinumero:</label><br>
+
+            <input
+                type="text"
+                id="registration"
+                name="registration"
+                aria-describedby="regHelp"
                 placeholder="ABC-123"
                 pattern="[A-Za-z]{3}-[0-9]{3}"
-                title="Anna rekisterinumero muodossa ABC-123"
                 required>
+
+            <p id="regHelp">
+                Anna rekisterinumero muodossa ABC-123.
             </p>
 
             <p>
@@ -59,15 +86,18 @@
             </p>
 
 
-            <p>
-                <label for="email">Sähköposti:</label><br>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-                    title="Anna sähköpostiosoite muodossa nimi@posti.com"
-                    required>
+            <label for="email">Sähköposti:</label><br>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                aria-describedby="emailHelp"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                required>
+
+            <p id="emailHelp">
+                Anna sähköpostiosoite muodossa nimi@posti.com.
             </p>
 
             <p>
@@ -95,6 +125,8 @@
 
         </form>
 
+        <p id="successMessage" role="status"></p>
+
         <p>
             Huom! Vastaanotamme huoltopyyntösi, vaikka syöttämäsi tiedot katoavat lähettämisen jälkeen.
             Otamme sinuun yhteyttä puhelimitse ja vahvistamme huoltoajan erikseen.
@@ -106,6 +138,8 @@
         <p>Autokorjaamo Hakola, Kauhava</p>
         <p>Avoinna arkisin. Lauantaisin sopimuksen mukaan.</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

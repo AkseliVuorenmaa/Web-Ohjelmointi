@@ -10,3 +10,6 @@ Tiivistettynä: Sivusta tulee yksinkertainen, tyylikäs ja järjestelmällinen.
 Haluaisin kuvia hieman joko työntekijöistä, autoista mitä liikkeessä huolletaan ja tiloistanne. Käytän toistaiseksi yleisiä kuvia autoista ja muista laitteista.
 Kun annatte luvan minulle aloittaa sivun valmistus, aion aloittaa sivun tekemisen tehokkaasti ja mahdollisimman pian. Uskon että saatte juuri sellaiset sivut, jotka te haluatte.
 Sivuston kohderyhmä ovat henkilöautojen, työajoneuvojen ja maatilakoneiden omistajat. Tällaisilla ihmisillä on usein kiireinen aikataulu, joten käyttöliittymä vastaa heidän tarpeisiinsa loistavasti. Selkeä ja virtaviivainen käyttöliittymä nopeuttaa siis huomattavasti asioimista palvelussa ja myös käyttäjän kokemus helpottuu.
+
+Pitää lisätä kaikki kontaktitietojen tiedot localmemoryyn.
+Pitää muuttaa ulkoasua contact sivulla. Lisätiedot ovat hieman piilossa ja lopussa saattaa olla turhaa tekstiä.
